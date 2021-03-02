@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
+import useInputs from "./Reducer/useInputs";
 
 const Info = () => {
-  const [form, setForm] = useState({
+  const [state, onChange] = useInputs({
     name: "",
     nickname: "",
   });
-  const { name, nickname } = form;
 
-  useEffect(() => {
-    console.log(name);
-  }, [name]);
+  const { name, nickname } = state;
+  // const [form, setForm] = useState({
+  //   name: "",
+  //   nickname: "",
+  // });
 
-  const onChange = (e) => {
-    const nextForm = {
-      ...form,
-      [e.target.name]: e.target.value,
-    };
-    setForm(nextForm);
-  };
+  // useEffect(() => {
+  //   console.log("effect");
+  //   console.log(name);
+  //   return () => {
+  //     console.log("cleanup");
+  //     console.log(name);
+  //   };
+  // }, [name]);
 
   return (
     <div>
