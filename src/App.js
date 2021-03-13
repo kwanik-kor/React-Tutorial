@@ -13,12 +13,18 @@ import React, { Component, useState } from "react";
 // import LifeCycleSample from "./LifeCycleSample";
 // import ErrorBoundary from "./ErrorBoundary";
 
-import Info from "./Info";
+// import Info from "./Info";
 
-import Average from "./Average";
+// import Average from "./Average";
+
+import SaasComponent from "./SaasComponent";
 
 const App = () => {
-  return <Info />;
+  return (
+    <div>
+      <SaasComponent />
+    </div>
+  );
 };
 
 export default App;
